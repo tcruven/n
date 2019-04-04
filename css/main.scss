@@ -1,0 +1,180 @@
+---
+
+---
+// Customization Variables
+
+$image-size: 100px;
+
+$max-width: 800px;
+$med-width: 600px;
+$small-width: 480px;
+
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 0;
+    font-family: "Spectral";
+    font-size: 13pt;
+    height: 100%;
+}
+h4 {
+    font-size: 18pt;
+    text-align: center;
+    margin-top: 20%;
+}
+p {
+    text-indent: 5%;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+hr {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+// divs
+
+.alignable {
+    display: inline-block;
+}
+.pull-left {
+    @extend .alignable;
+    float: left;
+}
+.pull-right {
+    @extend .alignable;
+    float: right;
+}
+.container {
+    max-width: $max-width;
+    margin: auto;
+}
+.wrapper {
+    min-height: 100%;
+}
+
+// index
+
+.post-title{
+    max-width: 500px;
+    color: #272727;
+    display: inline-block;
+    font-size: 30px;
+    line-height: 1.5;
+}
+.post-details{
+    @extend .pull-right;
+    line-height: 1.5;
+    text-align: right;
+    margin-left: 20px;
+}
+.post-snippet{
+    max-width: 500px;
+}
+
+// Mobile
+
+@media (max-width: 800px) {
+    .container {
+        max-width: $med-width;
+        transition: 0.3s ease all;
+    }
+}
+
+@media (max-width: 650px) {
+    .container {
+        max-width: 83%;
+    }
+    .navbar-ul {
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 500px) {
+	.navbar {
+		text-align: center;
+		padding: 50px 0px 0px 0px;
+	}
+	#site-title {
+		width: 100%;
+		float: none;
+	}
+	#navlist {
+		padding: 10px 0 10px 0;
+		margin: 0;
+		display: block;
+		float: none;
+		text-align: center;
+		width: 100%;
+	}
+	#navlist li.alignable {
+		display: inline-block;
+	}
+	#navlist li.pull-left {
+		float: none;
+	}
+	#navlist li.navbar-list {
+		margin: 0;
+	}
+}
+
+.content {
+    a:hover {
+        text-decoration: underline;
+    }
+}
+
+.row{
+    width: 80%;
+    margin-left:10%;
+    font-family: Helvetica;
+    font-size: 12pt;
+}
+
+.strip{
+  padding: 10px;
+  border-top: 1px solid silver;
+  border-top: 1px solid silver;
+}
+
+.strip img{
+  float: left;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
+.light{
+  color: silver;
+}
+
+.summary{
+  margin-left: 60px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+.buttons{
+  float: right;
+}
+
+.buttons a{
+  color: silver;
+}
+
+.buttons a:hover{
+  color: #428bca;
+  text-decoration: none;
+}
+
+.buttons i.fa{
+  margin-left: .5em;
+}

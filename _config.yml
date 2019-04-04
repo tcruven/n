@@ -1,0 +1,10 @@
+title: Attention
+author: Damien Cheep
+
+baseurl: "/attention"
+
+permalink: /:year-:month-:day-:title/
+sass:
+    style: compressed
+    sass_dir: css
+
