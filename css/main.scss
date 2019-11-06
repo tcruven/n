@@ -29,7 +29,7 @@ p {
     text-indent: 5%;
 }
 a {
-    text-decoration: none;
+    text-decoration: underline;
 }
 a:hover {
     text-decoration: underline;
@@ -39,6 +39,17 @@ hr {
     height: 0;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.xpand {
+    display: none;
+    opacity: 0;
+    transition: 0.1s;
+}
+
+.xpand p {
+    opacity: inherit;
+    transition: inherit;
 }
 
 // divs

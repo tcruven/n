@@ -34,4 +34,23 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-K6BCB5Z');</script>
 
+    <script>
+        function toggle_element(el) {
+            document.getElementById(el).style.display = 'inline';
+            setTimeout(function(){
+                document.getElementById(el).style.opacity = 0.75;
+            }, 10);
+            return false;
+        }
+        function toggle_all_elements(){
+            var allElements = document.getElementsByTagName("*");
+            for (var i = 0, n = allElements.length; i < n; ++i) {
+              var el = allElements[i];
+              if (el.id && (el.tagName != 'H4')) { toggle_element(el.id); }
+            }
+            return false;
+        }
+        
+    </script>
+
 </head>
