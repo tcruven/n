@@ -3,7 +3,7 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords" content="blog, {{ site.author }}, {{ site.title }}, jekyll">
+    <meta name="keywords" content="{{ site.author }}, {{ site.title }}">
     <meta name="author" content="{{ site.author }}">
     {% if page.url == "/404.html" %}
         <meta http-equiv="refresh" content="5; url=/">
@@ -16,6 +16,47 @@
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <script>
+    search = window.location.search
+    if (! search.includes('v=')){
+        contentVersion = '1'
+        var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?v=' + contentVersion;
+        window.history.pushState({ path: newurl }, '', newurl);
+    } else{
+        contentVersion = search.split('v=')[1]
+    }
+
+    function hide_class(class_name){
+        var appBanners = document.getElementsByClassName(class_name);
+
+        for (var i = 0; i < appBanners.length; i ++) {
+            appBanners[i].style.display = 'none';
+        }
+    }
+    function show_class(class_name){
+        var appBanners = document.getElementsByClassName(class_name);
+
+        for (var i = 0; i < appBanners.length; i ++) {
+            appBanners[i].style.display = 'inline';
+        }
+    }
+
+    document.addEventListener('readystatechange', event => {
+
+        if (event.target.readyState === "interactive") {   
+            if (contentVersion == '2'){
+                hide_class('v1')
+                show_class('v2')
+            }
+            
+        }
+
+
+    });
+
+
+    
+    </script>
+    <script>
         function makeid() {
           var text = "";
           var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
@@ -26,7 +67,7 @@
           return text;
         }
         var userID = makeid();
-        dataLayer = [{'userID': userID,'contentVersion':1}];
+        dataLayer = [{'userID': userID,'contentVersion':contentVersion}];
     </script>
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
