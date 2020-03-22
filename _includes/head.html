@@ -10,7 +10,6 @@
     {% endif %}
     <link href="https://fonts.googleapis.com/css?family=Spectral" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Verdana" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Economica" rel="stylesheet">
     <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
@@ -52,6 +51,34 @@
                     hide_class('notv2')
                     show_class('v2')
                 }
+                if (contentVersion == '3'){
+                    var div = document.getElementById('ch2_wrapper')
+                    div.parentNode.insertBefore(div, document.getElementById('ch1_wrapper'))
+                    var div = document.getElementById('ch3_wrapper')
+                    div.parentNode.insertBefore(div, document.getElementById('ch1_wrapper'))
+                }
+                if (contentVersion == '4'){
+                    var div = document.getElementById('ch2_wrapper')
+                    div.parentNode.insertBefore(div, document.getElementById('ch1_wrapper'))
+                }
+                if (contentVersion == '5'){
+                    var div = document.getElementById('ch3_wrapper')
+                    div.parentNode.insertBefore(div, document.getElementById('ch1_wrapper'))
+                    var div = document.getElementById('ch2_wrapper')
+                    div.parentNode.insertBefore(div, document.getElementById('ch1_wrapper'))
+                    hide_class('notv5')
+                }
+                if (contentVersion == '6'){
+                    hide_class('notv6')
+                    show_class('v6')
+                }
+                if (contentVersion == '7'){
+                    hide_class('notv7')
+                    show_class('v7')
+                }
+                
+                
+
             }
         });
     </script>
@@ -76,9 +103,21 @@
 
     <script>
         function toggle_element(el) {
+            try{
+                ga('send', {
+                  hitType: 'event',
+                  eventCategory: 'toggle',
+                  eventAction: el,
+                  eventLabel: contentVersion+':'+userID+':nah',
+                  eventValue: 1
+                });
+            }catch(e){
+                console.log('failed ga')
+            }
             document.getElementById(el).style.display = 'inline';
             setTimeout(function(){
                 document.getElementById(el).style.opacity = 0.75;
+                window.scrollBy(0, 200);
             }, 10);
             return false;
         }
