@@ -127,7 +127,9 @@
             document.getElementById(el).style.display = 'inline';
             setTimeout(function(){
                 document.getElementById(el).style.opacity = 0.75;
-                window.scrollBy(0, 200);
+                if el.includes('load_more'){
+                    window.scrollBy(0, 200);
+                }
             }, 10);
             return false;
         }
