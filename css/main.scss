@@ -21,6 +21,10 @@ body {
     height: 100%;
 }
 
+.email {
+  font-family: "Courier";
+}
+
 .v2 {
     display:none;
 }
@@ -200,7 +204,7 @@ hr {
 .v7 {
   margin:25px;
   display:none;
-  text-align:center; 
+  text-align:center;
   font-size:14;
   a {
     background-color:#d3d3d3;
