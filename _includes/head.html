@@ -56,26 +56,26 @@
 
         document.addEventListener('readystatechange', event => {
 
-            if (event.target.readyState === "interactive") {   
+            if (event.target.readyState === "interactive") {
                 if (contentVersion == '2'){
                     hide_class('notv2')
                     show_class('v2')
                 }
                 if (contentVersion == '3'){
-                    var div = document.getElementById('ch2_wrapper')
-                    div.parentNode.insertBefore(div, document.getElementById('ch1_wrapper'))
-                    var div = document.getElementById('ch3_wrapper')
-                    div.parentNode.insertBefore(div, document.getElementById('ch1_wrapper'))
+                    // var div = document.getElementById('ch2_wrapper')
+                    // div.parentNode.insertBefore(div, document.getElementById('ch1_wrapper'))
+                    // var div = document.getElementById('ch3_wrapper')
+                    // div.parentNode.insertBefore(div, document.getElementById('ch1_wrapper'))
                 }
                 if (contentVersion == '4'){
-                    var div = document.getElementById('ch2_wrapper')
-                    div.parentNode.insertBefore(div, document.getElementById('ch1_wrapper'))
+                    // var div = document.getElementById('ch2_wrapper')
+                    // div.parentNode.insertBefore(div, document.getElementById('ch1_wrapper'))
                 }
                 if (contentVersion == '5'){
-                    var div = document.getElementById('ch3_wrapper')
-                    div.parentNode.insertBefore(div, document.getElementById('ch1_wrapper'))
-                    var div = document.getElementById('ch2_wrapper')
-                    div.parentNode.insertBefore(div, document.getElementById('ch1_wrapper'))
+                    // var div = document.getElementById('ch3_wrapper')
+                    // div.parentNode.insertBefore(div, document.getElementById('ch1_wrapper'))
+                    // var div = document.getElementById('ch2_wrapper')
+                    // div.parentNode.insertBefore(div, document.getElementById('ch1_wrapper'))
                     hide_class('notv5')
                 }
                 if (contentVersion == '6'){
@@ -86,8 +86,8 @@
                     hide_class('notv7')
                     show_class('v7')
                 }
-                
-                
+
+
 
             }
         });
@@ -141,7 +141,7 @@
             }
             return false;
         }
-        
+
     </script>
 
 </head>
