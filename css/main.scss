@@ -85,6 +85,25 @@ hr {
 .wrapper {
     min-height: 100%;
 }
+.fixme {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  text-align: center;
+  background-color:white;
+}
+
+#fullmovie {
+  display: block;
+}
+
+#medmovie {
+  display: none;
+}
+
+#mobilemovie {
+  display: none;
+}
 
 // index
 
@@ -105,12 +124,23 @@ hr {
     max-width: 500px;
 }
 
+
 // Mobile
 
 @media (max-width: 800px) {
     .container {
         max-width: $med-width;
         transition: 0.3s ease all;
+    }
+    #fullmovie {
+        display: none;
+    }
+    #mobilemovie {
+        display: none;
+    }
+
+    #medmovie {
+        display: block;
     }
 }
 
@@ -149,6 +179,17 @@ hr {
 	#navlist li.navbar-list {
 		margin: 0;
 	}
+  #fullmovie {
+        display: none;
+    }
+    #mobilemovie {
+        display: block;
+        width: 100%;
+    }
+
+    #medmovie {
+        display: none;
+    }
 }
 
 .content {
