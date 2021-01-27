@@ -134,6 +134,10 @@ hr {
         transition: 0.3s ease all;
     }
 
+  .fixme {
+    padding-top: 80%;
+  }
+
 }
 
 @media (max-width: 650px) {
@@ -143,6 +147,10 @@ hr {
     .navbar-ul {
         margin-top: 5px;
     }
+    .fixme {
+      padding-top: 100%;
+    }
+
 }
 
 @media (max-width: 500px) {
@@ -171,6 +179,9 @@ hr {
 	#navlist li.navbar-list {
 		margin: 0;
 	}
+  .fixme {
+    padding-top: 100%;
+  }
 
 }
 
