@@ -91,19 +91,20 @@ hr {
   top: 0px;
   text-align: center;
   background-color:white;
+  width:100%;
+  padding-top: 50%;
+}
+.resp-iframe {
+    position: absolute;
+    padding-top:1%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
 }
 
-#fullmovie {
-  display: block;
-}
 
-#medmovie {
-  display: none;
-}
-
-#mobilemovie {
-  display: none;
-}
 
 // index
 
@@ -132,16 +133,7 @@ hr {
         max-width: $med-width;
         transition: 0.3s ease all;
     }
-    #fullmovie {
-        display: none;
-    }
-    #mobilemovie {
-        display: none;
-    }
 
-    #medmovie {
-        display: block;
-    }
 }
 
 @media (max-width: 650px) {
@@ -179,17 +171,7 @@ hr {
 	#navlist li.navbar-list {
 		margin: 0;
 	}
-  #fullmovie {
-        display: none;
-    }
-    #mobilemovie {
-        display: block;
-        width: 100%;
-    }
 
-    #medmovie {
-        display: none;
-    }
 }
 
 .content {
